@@ -1,5 +1,4 @@
-function bloodGroupChecker(e) {
-    e.preventDefault();
+function bloodGroupChecker() {
     const userGroup = document.getElementById("bloodGroup").value;
     let donateBloodEl = document.getElementById("bloodDonate");
     let receiveBloodEl = document.getElementById("bloodReceive");
@@ -35,7 +34,6 @@ function bloodGroupChecker(e) {
         alert("Please Select your blood group");
         return;
     }
-
     for (let i = 0; i < donateBloodGroups.length; i++) {
         // console.log("run");
         donateBloodEl.innerHTML += `<li class="flex-auto bg-blue-600  font-bold text-center rounded-sm px-1">${donateBloodGroups[i]}</li>`
